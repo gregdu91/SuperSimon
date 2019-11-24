@@ -6,15 +6,21 @@
 </head>
 <body>
 
+	
 
-	<button id="red">Red</button> 
+<div id="boutons">
+
+    <audio src="audio/do.mp4" id="do" autoplay="false"></audio>
+    <audio src="audio/re.mp4" id="re" autoplay="false"></audio>
+    <audio src="audio/mi.mp4" id="mi" autoplay="false"></audio>
+    <audio src="audio/fa.mp4" id="fa" autoplay="false"></audio>
+
+	<div>
+	<button id="red">Red</button>
 	<button id="blue">Blue</button>
-
-	<button id="start">Start</button>
-	<button id="score">Score :</button>
-
 	<button id="green">Green</button>
 	<button id="yellow">Yellow</button>
+
 	<!-- Trigger/Open The Modal -->
 <button id="myBtn"></button>
 
@@ -24,12 +30,24 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Les règles : On baise ta mère puis tu baise tes longs morts</p>
+    <p> Lorsque qu'une partie se lance, une suite de trois couleurs choisies aléatoirement vont s'illuminer, en produisant une note.<br>
+                    Le joueur devra reconstituer cette suite de couleur dans le même ordre en cliquant sur la bonne touche.<br>
+                    PS: pendant les 8
+                    prochains round la vitesse de jeu va augmenter de façon croissante jusqu'au bout
+                    du round 8 ensuite la vitesse se stabilisera.</p>
+  </div>
   </div>
 
-</div>
+  
+	<button id="start"onclick="play()">Start</button>
+	<button id="replay">Replay</button>
+	<div class="score">Score :</div>
 
+
+</div>
+</div>
 </body>
 
  <script src="script.js"></script>
+ <script src="modal.js"></script>
 </html>

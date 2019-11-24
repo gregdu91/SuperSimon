@@ -4,32 +4,89 @@ button{
 	padding: 2px;
 }
 #red{
-	background-color: red;
+	background-color: #BB4330;
 	border-radius: 60px;
 }
 #blue{
-	background-color: blue;
+	background-color: #17B4C5;
 	border-radius: 60px;
 }
 #green{
-	background-color: green;
+	background-color: #14C613;
 	border-radius: 60px;
 }
+
+button#red:hover{
+
+
+	background-color: #FF1400;
+}
+
+
+button#red:active{
+	background-color: #F69289;
+}
+
+button#blue:hover{
+
+
+	background-color: #7AC8F3;
+}
+
+button#blue:active{
+	background-color: #5DE2F3;
+}
+
+button#green:hover{
+
+
+	background-color: #63E562;
+}
+
+button#green:active{
+	background-color: #96F695;
+}
+
+button#yellow:hover{
+
+
+	background-color: #FFFB00;
+}
+
+button#yellow:active{
+	background-color: #F9F776;
+}
+
 #yellow{
-	background-color: yellow;
+	background-color: #DEF209;
 	border-radius: 60px;
 }
 #start{
 	width: 50px;
 	height: 50px;
-	background-color: grey;
+	background-color: lightgrey;
+	border-radius: 9px;
+}
+#replay{
+	width: 50px;
+	height: 50px;
+	background-color: lightgrey;
+	border-radius: 9px;
 }
 #myBtn{
-	height: 45px;
-	width: 45px;
-	background-image: url(img/point1.jpg);
+
+	height: 50px;
+	width: 50px;
 	vertical-align: top;
+	border-radius: 15px;
+	background-image: url(img/point1.jpg);
 }
+
+.score-board{
+
+	padding: 10px;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
