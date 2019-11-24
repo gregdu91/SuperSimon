@@ -1,3 +1,4 @@
+//mes variables
 let ordre = [];
 let joueurTour = [];
 let flash;
@@ -9,7 +10,7 @@ let intervalId;
 let bon;
 let win;
 
-
+// mes constantes
 const score = document.querySelector("#score");
 const click = document.querySelector("#click");
 const csRed = document.querySelector("#red");
@@ -17,6 +18,7 @@ const csBlue = document.querySelector("#blue");
 const csGreen = document.querySelector("#green");
 const csYellow = document.querySelector("#yellow");
 
+//va créer des données aléatoirement par rangée de 4
 function Move() {
   for (var i = 0; i < 20; i++) {
     ordre.push(Math.floor(Math.random() * 4) +1);
@@ -80,14 +82,14 @@ function simonTour() {
 
 }
 
-
+// permet de remettre la couleur d'origine
 function clearColor() {
   csRed.style.backgroundColor = "red";
   csBlue.style.backgroundColor = "blue";
   csGreen.style.backgroundColor = "green";
   csYellow.style.backgroundColor = "yellow";
 }
-
+//permet de jouer et faire briller touche
 function red() {
   if (son) {
 
@@ -132,6 +134,7 @@ function yellow() {
   csYellow.style.backgroundColor = "white";
 }
 
+//permet au joueur de cliquer sur les touches
 function clickRed() {
   red(); 
   point = 1;
@@ -172,6 +175,7 @@ function clickYellow() {
   }, 200)
 }
 
+//permet de vérifier si le joueur a bon
 function check() {
 
   if (joueurTour[joueurTour.length] == pcTour[pcTour.length]) {
