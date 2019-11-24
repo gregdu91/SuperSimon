@@ -16,10 +16,10 @@
     <audio src="audio/fa.mp4" id="fa" autoplay="false"></audio>
 
 	<div>
-	<button id="red">Red</button>
-	<button id="blue">Blue</button>
-	<button id="green">Green</button>
-	<button id="yellow">Yellow</button>
+	<button id="red" onclick="clickRed()">Red</button>
+	<button id="blue" onclick="clickBlue()">Blue</button>
+	<button id="green" onclick="clickGreen()">Green</button>
+	<button id="yellow" onclick="clickYellow()">Yellow</button>
 
 	<!-- Trigger/Open The Modal -->
 <button id="myBtn"></button>
@@ -40,8 +40,9 @@
 
   
 	<button id="start"onclick="play()">Start</button>
-	<button id="replay">Replay</button>
-	<div class="score">Score :</div>
+	<button id="replay" onclick="replay()">Replay</button>
+	<div id="score">Tour:</div>
+  <div id="click">Score:</div>
 
 
 </div>

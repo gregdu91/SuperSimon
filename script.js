@@ -2,6 +2,7 @@ let ordre = [];
 let joueurTour = [];
 let flash;
 let turn;
+let point;
 let PcTour;
 let son = true;
 let intervalId;
@@ -10,28 +11,53 @@ let win;
 
 
 const score = document.querySelector("#score");
+const click = document.querySelector("#click");
 const csRed = document.querySelector("#red");
 const csBlue = document.querySelector("#blue");
 const csGreen = document.querySelector("#green");
 const csYellow = document.querySelector("#yellow");
 
+function Move() {
+  for (var i = 0; i < 20; i++) {
+    ordre.push(Math.floor(Math.random() * 4) +1);
+  }
+}
+
 
 function play() {
   win = false;
   ordre = [];
+  turn = 1;
+  score.innerHTML += turn;
   joueurTour = [];
   flash = 0;
   intervalId = 0;
-  turn = 1;
-  for (var i = 0; i < 20; i++) {
-    ordre.push(Math.floor(Math.random() * 4) + 1);
-  }
+  Move();
 
   PcTour = true;
 
   intervalId = setInterval(simonTour, 1000)
 
+
 }
+
+function replay() {
+
+  win = false;
+  ordre = [];
+  turn = 1;
+  score.innerHTML = "Score :";
+  joueurTour = [];
+  flash = 0;
+  intervalId = 0;
+  play();
+
+  PcTour = true;
+
+  intervalId = setInterval(simonTour, 1000)
+  
+  }
+
 
 function simonTour() {
   if (flash == turn) {
@@ -51,6 +77,7 @@ function simonTour() {
       }, 200);
 
     }
+
 }
 
 
@@ -105,20 +132,61 @@ function yellow() {
   csYellow.style.backgroundColor = "white";
 }
 
-csRed.addEventListener('click', (event) => {
-  if (win) {
-    joueurTour.push(1);
-    //check();
-    red();
-  }
-  if (!win) {
-    setTimeout(() => {
-      clearColor;
+function clickRed() {
+  red(); 
+  point = 1;
+  click.innerHTML += point;
+  setTimeout(() => {
+    clearColor();
 
-    },300    
-      )
+  }, 200)
+}
+
+function clickBlue() {
+  blue();
+  point = 1;
+  click.innerHTML += point;
+  setTimeout(() => {
+    clearColor();
+
+  }, 200)
+}
+
+function clickGreen() {
+  green();
+  point = 1;
+  click.innerHTML += point;
+  setTimeout(() => {
+    clearColor();
+
+  }, 200)
+}
+
+function clickYellow() {
+  yellow();
+  point = 1;
+  click.innerHTML += point;
+  setTimeout(() => {
+    clearColor();
+
+  }, 200)
+}
+
+function check() {
+
+  if (joueurTour[joueurTour.length] == pcTour[pcTour.length]) {
+    turn++;
+    joueurTour = [];
+    pcTour = true;
+    flash = 0;
+    score.innerHTML += turn;
+    intervalId = setInterval(gameTurn, 800);
+    Move();
   }
-  })
+  }
+  
+
+
 
 
 
